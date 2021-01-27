@@ -6,6 +6,8 @@ import SignUp from '../pages/SignUp';
 import ForgotPassword from '../pages/ForgotPassword';
 import ResetPassword from '../pages/ResetPassword';
 import Dashboard from '../pages/Dashboard';
+import Profile from '../pages/Profile';
+
 import Route from './route';
 
 const Routes: React.FC = () => {
@@ -13,9 +15,10 @@ const Routes: React.FC = () => {
     <Switch>
       <Route exact path="/" component={SignIn} />
       <Route path="/signup" component={SignUp} />
-      <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/forgot" component={ForgotPassword} />
       <Route path="/reset_password" component={ResetPassword} />
+      <Route path="/dashboard" component={Dashboard} isPrivate />
+      <Route path="/profile" component={Profile} isPrivate />
     </Switch>
   );
 };
